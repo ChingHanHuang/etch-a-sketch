@@ -1,30 +1,40 @@
+const DEFAULT_SIZE = 10;
 
+
+const clearBtn = document.getElementById("clearBtn");
+clearBtn.addEventListener('click', clearPaint);
 
 
 let slider = document.getElementById("myRange");
-let gridSize = document.getElementById("size");
 slider.oninput = function() {
-    document.querySelectorAll(".column").forEach(el => el.remove());
-    createGrid(this.value);
+    document.querySelectorAll(".cell").forEach(el => el.remove());
+    setUpGrid(this.value);
+    updateSizeValue(this.value);
 }
 
-function createGrid(size) {
-    gridSize.innerHTML = `${size} x ${size}`;
+function setUpGrid(size) {
     let grid = document.getElementById("grid");
-    for(let i = 0; i < size; i++) {
-        let column = document.createElement("div");
-        column.className = "column";
-        for(let j = 0; j < size; j++) {
-            let row = document.createElement("div");
-            row.className = "row";
-            row.style.width = "50px";
-            row.style.height = "50px";
-            row.style.background = "pink";
+    grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
-            column.appendChild(row);
-        }
-        grid.appendChild(column);
+    for(let i = 0; i < size * size; i++) {
+        let cell = document.createElement("div");
+        cell.classList.add("cell");
+        cell.style.borderColor = "blue";
+        cell.style.borderStyle = "solid";
+        grid.appendChild(cell);
     }
 }
 
-createGrid(slider.value);
+function updateSizeValue(size) {
+    document.getElementById("size").innerHTML = `${size} x ${size}`;
+
+}
+
+function clearPaint() {
+
+}
+
+window.onload = () => {
+    setUpGrid(DEFAULT_SIZE);
+}

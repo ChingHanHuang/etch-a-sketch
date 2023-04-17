@@ -24,9 +24,10 @@ main {
 }
 
 #grid {
-    display: flex;
-    height: 200px;
-    width: 200px;
+    display: grid;
+    height: 500px;
+    width: 500px;
+    background-color: lightskyblue;
 }
 
 footer {
