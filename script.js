@@ -22,8 +22,13 @@ function setUpGrid(size) {
         cell.classList.add("cell");
         cell.style.borderColor = "blue";
         cell.style.borderStyle = "solid";
+        cell.addEventListener("mousedown", changeColor);
         grid.appendChild(cell);
     }
+}
+
+function changeColor(e) {
+    e.target.style.backgroundColor = "red";
 }
 
 function updateSizeValue(size) {
