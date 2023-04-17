@@ -1,13 +1,21 @@
 const DEFAULT_SIZE = 10;
+const DEFAULT_COLOR = "";
 
+let currentColor = DEFAULT_COLOR;
 let mousedown = false;
 document.body.onmousedown = () => mousedown = true;
 document.body.onmouseup = () => mousedown = false;
 
-
+const colorPicker = document.getElementById("colorPicker");
 const clearBtn = document.getElementById("clearBtn");
-clearBtn.addEventListener('click', clearPaint);
 
+colorPicker.oninput = (e) => setCurrentColor(e.target.value);
+clearBtn.onclick = () => clearGridColor();
+
+
+function setCurrentColor(newColor) {
+    currentColor = newColor;
+}
 
 let slider = document.getElementById("myRange");
 slider.oninput = function() {
@@ -34,7 +42,7 @@ function setUpGrid(size) {
 
 function changeColor(e) {
     if (e.type === "mouseover" && !mousedown) return;
-    e.target.style.backgroundColor = "red";
+    e.target.style.backgroundColor = currentColor;
 }
 
 function updateSizeValue(size) {
@@ -42,7 +50,7 @@ function updateSizeValue(size) {
 
 }
 
-function clearPaint() {
+function clearGridColor() {
 
 }
 
