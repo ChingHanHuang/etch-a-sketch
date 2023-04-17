@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Etch-a-Sketch</title>
     <link type="text/css" rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
@@ -17,7 +18,14 @@
         <div id="grid"></div>
     </main>
     <footer>
-
+        <p id="copyright">
+            Copyright <span>&copy</span> 
+            <script>document.write(new Date().getFullYear())</script>
+            Ching Han
+        </p>
+        <a href="https://github.com/ChingHanHuang" target="_blank">
+            <i class="fa fa-github"></i>
+        </a>
     </footer>
 
     <script type="text/javascript" src="script.js"></script>
