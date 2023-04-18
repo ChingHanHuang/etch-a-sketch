@@ -1,35 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Etch-a-Sketch</title>
-    <link type="text/css" rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
     <header>
-        <h1>Etch-a-Sketch</h1>
+      <h1>Etch-a-Sketch</h1>
     </header>
     <main>
-        <div id="setting">
-            <input id="colorPicker" type="color" value="#ff99cc">
-            <div>Size: <span id="size">10 x 10</span></div>
-            <input type="range" min="1" max="50" value="5" class="slider" id="slider">
-            <button id="clearBtn">Clear</button>
-        </div>
-        <div id="grid"></div>
+      <div id="setting">
+        <input id="colorPicker" type="color" value="#ff99cc" />
+        <button id="colorBtn">Color</button>
+        <button id="rainbowBtn">Rainbow</button>
+        <button id="eraserBtn">Eraser</button>
+        <div>Size: <span id="size">16 x 16</span></div>
+        <input
+          type="range"
+          min="1"
+          max="50"
+          value="5"
+          class="slider"
+          id="slider"
+        />
+        <button id="clearBtn">Clear</button>
+      </div>
+      <div id="grid"></div>
     </main>
     <footer>
-        <p id="copyright">
-            Copyright <span>&copy</span> 
-            <script>document.write(new Date().getFullYear())</script>
-            Ching Han
-        </p>
-        <a href="https://github.com/ChingHanHuang" target="_blank">
-            <i class="fa fa-github"></i>
-        </a>
+      <p id="copyright">
+        Copyright <span>&copy</span>
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Ching Han
+      </p>
+      <a href="https://github.com/ChingHanHuang" target="_blank">
+        <i class="fa fa-github"></i>
+      </a>
     </footer>
 
     <script type="text/javascript" src="script.js"></script>
-</body>
+  </body>
 </html>

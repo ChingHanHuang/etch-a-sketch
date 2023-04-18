@@ -11,12 +11,21 @@ html {
     min-height: 100%;
 }
 
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin-bottom: 100px;
+    background-color: #e3e1dd;
+}
+
 header {
-    background-color: #ffc5ec;
+    background-color: #b2c3ff;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: center;;
     padding: 10px 0px;
     margin-bottom: 50px;
+    height: 100px;
 }
 
 main {
@@ -32,16 +41,24 @@ main {
     flex-direction: column;
 }
 
-#colorPicker, #slider, #clearBtn {
-    height: 30px;
+#colorPicker, #colorBtn, #rainbowBtn, #eraserBtn, #slider, #clearBtn {
+    height: 40px;
     width: 80%;
     margin-bottom: 20px;
+}
+
+button.active {
+    background-color: lightcoral;
 }
 
 #grid {
     display: grid;
     height: 500px;
     width: 500px;
+}
+
+#copyright {
+    margin-right: 5px;
 }
 
 footer {
